@@ -196,92 +196,38 @@ async function save() {
         break;
       }
     }
-  }
 
-  email_validated = true;
-
-  const emailInput = document.getElementById("email");
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  console.log("email validation", emailRegex.test(emailInput.value));
-  if (emailRegex.test(emailInput.value)) {
-    email_validated = true;
-    email_label = document.getElementById("email");
-    email_label.style.borderColor = "black";
-  } else {
-    email_validated = false;
-    email_label = document.getElementById("email");
-    email_label.style.borderColor = "red";
-  }
-
-  studentno_validate = true;
-  const studentNoInput = document.getElementById("student_no");
-  const studentNoRegex = /^[A-Za-z]{4}-\d{5}-MN-0$/i;
-
-  if (studentNoRegex.test(studentNoInput.value)) {
-    studentno_validate = true;
-    student_no_label = document.getElementById("student_no");
-    student_no_label.style.borderColor = "black";
-  } else {
-    studentno_validate = false;
-    student_no_label = document.getElementById("student_no");
-    student_no_label.style.borderColor = "red";
-  }
-
-  cp_validate = true;
-  const cellphoneInput = document.getElementById("cellphone");
-  const cellphoneRegex = /^09\d{9}$/;
-
-  if (cellphoneRegex.test(cellphoneInput.value)) {
-    cp_label = document.getElementById("cellphone");
-    cp_label.style.borderColor = "black";
-    cp_validate = true;
-  } else {
-    cp_label = document.getElementById("cellphone");
-    cp_label.style.borderColor = "red";
-    cp_validate = false;
-  }
-
-  allValidated =
-    text_validated &&
-    checkbox_validated &&
-    radio_validated &&
-    email_validated &&
-    studentno_validate &&
-    cp_validate;
-
-  if (allValidated) {
-    await fetch(`http://127.0.0.1:8000/save/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: student_name.value,
-        student_no: student_no.value,
-        home_address: home_address.value,
-        school_year: school_year.value,
-        age: age.value,
-        sex: sex.value,
-        civil_status: civil_status.value,
-        course_college: course_college.value,
-        blood_type: blood_type.value,
-        email_address: email_address.value,
-        parent_name: parent_name.value,
-        landline: landline.value,
-        cellphone: cellphone.value,
-        has_medical_illness: illness_button,
-        diseases: illnesses.join(", "),
-        food: food.value,
-        no_known_allergies: no_known_allergies.value,
-        medicines: medicines.join(", "),
-        cigarette: cig_selected,
-        alcohol: alc_selected,
-      }),
-    });
-  } else {
-    alert(
-      "fill up all the required fields or check if you have the correct formats for student number, email, and phone number"
-    );
+    if (text_validated && checkbox_validated && radio_validated) {
+      await fetch(`http://127.0.0.1:8000/save/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: student_name.value,
+          student_no: student_no.value,
+          home_address: home_address.value,
+          school_year: school_year.value,
+          age: age.value,
+          sex: sex.value,
+          civil_status: civil_status.value,
+          course_college: course_college.value,
+          blood_type: blood_type.value,
+          email_address: email_address.value,
+          parent_name: parent_name.value,
+          landline: landline.value,
+          cellphone: cellphone.value,
+          has_medical_illness: illness_button,
+          diseases: illnesses,
+          food: food.value,
+          no_known_allergies: no_known_allergies.value,
+          medicines: medicines,
+          cigarette: cig_selected,
+          alcohol: alc_selected,
+        }),
+      });
+    } else {
+      alert("Answer all required fields");
+    }
   }
 }

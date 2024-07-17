@@ -233,12 +233,8 @@ async function save() {
   const cellphoneRegex = /^09\d{9}$/;
 
   if (cellphoneRegex.test(cellphoneInput.value)) {
-    cp_label = document.getElementById("cellphone");
-    cp_label.style.borderColor = "black";
     cp_validate = true;
   } else {
-    cp_label = document.getElementById("cellphone");
-    cp_label.style.borderColor = "red";
     cp_validate = false;
   }
 
@@ -279,9 +275,5 @@ async function save() {
         alcohol: alc_selected,
       }),
     });
-  } else {
-    alert(
-      "fill up all the required fields or check if you have the correct formats for student number, email, and phone number"
-    );
   }
 }

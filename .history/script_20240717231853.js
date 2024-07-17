@@ -279,9 +279,5 @@ async function save() {
         alcohol: alc_selected,
       }),
     });
-  } else {
-    alert(
-      "fill up all the required fields or check if you have the correct formats for student number, email, and phone number"
-    );
   }
 }

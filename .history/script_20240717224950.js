@@ -203,11 +203,9 @@ async function save() {
   const emailInput = document.getElementById("email");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  console.log("email validation", emailRegex.test(emailInput.value));
+  console.log("email validation");
   if (emailRegex.test(emailInput.value)) {
     email_validated = true;
-    email_label = document.getElementById("email");
-    email_label.style.borderColor = "black";
   } else {
     email_validated = false;
     email_label = document.getElementById("email");
@@ -220,12 +218,8 @@ async function save() {
 
   if (studentNoRegex.test(studentNoInput.value)) {
     studentno_validate = true;
-    student_no_label = document.getElementById("student_no");
-    student_no_label.style.borderColor = "black";
   } else {
     studentno_validate = false;
-    student_no_label = document.getElementById("student_no");
-    student_no_label.style.borderColor = "red";
   }
 
   cp_validate = true;
@@ -233,12 +227,8 @@ async function save() {
   const cellphoneRegex = /^09\d{9}$/;
 
   if (cellphoneRegex.test(cellphoneInput.value)) {
-    cp_label = document.getElementById("cellphone");
-    cp_label.style.borderColor = "black";
     cp_validate = true;
   } else {
-    cp_label = document.getElementById("cellphone");
-    cp_label.style.borderColor = "red";
     cp_validate = false;
   }
 
@@ -279,9 +269,5 @@ async function save() {
         alcohol: alc_selected,
       }),
     });
-  } else {
-    alert(
-      "fill up all the required fields or check if you have the correct formats for student number, email, and phone number"
-    );
   }
 }
