@@ -620,14 +620,11 @@ video {
   margin: 2.5rem;
 }
 
-<<<<<<< HEAD
-=======
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
->>>>>>> 369896c41be45bb47678ec1315c6c6d2c53a30e0
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -644,10 +641,6 @@ video {
   margin-top: 2.5rem;
 }
 
-<<<<<<< HEAD
-.mt-2 {
-  margin-top: 0.5rem;
-=======
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -656,30 +649,8 @@ video {
   margin-top: auto;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .block {
   display: block;
-}
-
-.flex {
-  display: flex;
-}
-
-.grid {
-  display: grid;
-}
-
-.size-12 {
-  width: 3rem;
-  height: 3rem;
->>>>>>> 369896c41be45bb47678ec1315c6c6d2c53a30e0
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .flex {
@@ -715,12 +686,20 @@ video {
   width: 100vw;
 }
 
+.max-w-3xl {
+  max-width: 48rem;
+}
+
 .grid-cols-\[2fr\2c 2fr\2c 2fr\] {
   grid-template-columns: 2fr 2fr 2fr;
 }
 
 .flex-col {
   flex-direction: column;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .items-start {
@@ -756,6 +735,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -780,6 +763,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -796,6 +784,10 @@ video {
   padding: 0.75rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -808,6 +800,10 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-sans {
@@ -848,13 +844,16 @@ video {
   opacity: 0.4;
 }
 
-<<<<<<< HEAD
-=======
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
->>>>>>> 369896c41be45bb47678ec1315c6c6d2c53a30e0
 .bg-custom {
   background-image: url('./images/pup-bg.webp');
   background-size: cover;
