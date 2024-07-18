@@ -620,6 +620,14 @@ video {
   margin: 2.5rem;
 }
 
+<<<<<<< HEAD
+=======
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+>>>>>>> 369896c41be45bb47678ec1315c6c6d2c53a30e0
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -636,8 +644,38 @@ video {
   margin-top: 2.5rem;
 }
 
+<<<<<<< HEAD
 .mt-2 {
   margin-top: 0.5rem;
+=======
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.size-12 {
+  width: 3rem;
+  height: 3rem;
+>>>>>>> 369896c41be45bb47678ec1315c6c6d2c53a30e0
 }
 
 .mt-3 {
@@ -810,6 +848,13 @@ video {
   opacity: 0.4;
 }
 
+<<<<<<< HEAD
+=======
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+>>>>>>> 369896c41be45bb47678ec1315c6c6d2c53a30e0
 .bg-custom {
   background-image: url('./images/pup-bg.webp');
   background-size: cover;
